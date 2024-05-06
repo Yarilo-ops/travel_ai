@@ -1,0 +1,15 @@
+*.ipynb
+*.log
+*.pyc
+.DS_Store
+.cache/
+.idea
+.ipynb_checkpoints
+.pytest_cache
+.python-version
+/document_store.db
+/env
+/resources
+/static/*
+/tmp/*
+/venv
