@@ -45,4 +45,4 @@ def getRoute(args, way="multimodal"):
     url = f"https://2gis.ru/directions/points/"
     for val in args:
         url += f"{val[0]}%2C{val[1]}%3B{val[2]}" + "%7C"
-    print(url)
+    return url
