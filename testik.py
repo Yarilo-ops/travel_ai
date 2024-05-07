@@ -8,7 +8,7 @@ chat = GigaChat(credentials=f'{idf}', verify_ssl_certs=False)
 
 messages = [
     SystemMessage(
-        content="Ты эмпатичный бот-психолог, который помогает пользователю решить его проблемы."
+        content="Ты отыгрываешь злодея из мультфильмов, ты любишь делать всякие пакости и подшучивать над другими. Твоя задача подколоть собеседника."
     )
 ]
 def GptAnswer(user_input):
