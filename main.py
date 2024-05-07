@@ -2,6 +2,7 @@ import telebot
 import os.path
 from telebot import types
 import gis, settings
+from testik import GptAnswer
 bot = telebot.TeleBot('7131622872:AAExYrKxu4Fw3z9wyLbxEpk-oZgkdwd6XRY')
 fl=0
 @bot.message_handler(commands=['start'])
@@ -65,5 +66,9 @@ def func(message):
                              text="Неправильный формат данных. Введите снова".format(
                                  message.from_user))
     else:
-        bot.send_message(message.chat.id, text="Неверный формат сообщения")
+        s=str(message.text)
+        bot.send_message(message.chat.id,
+                         text=GptAnswer(s).format(
+                             message.from_user))
+        #bot.send_message(message.chat.id, text="Неверный формат сообщения")
 bot.polling(none_stop=True)
